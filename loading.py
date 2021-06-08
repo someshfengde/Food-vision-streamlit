@@ -1,6 +1,7 @@
 import tensorflow as tf
 import streamlit as st
 from PIL import Image
+import numpy as np
 
 class_names = ['apple_pie', 'baby_back_ribs', 'baklava', 'beef_carpaccio', 'beef_tartare', 'beet_salad', 'beignets',
                'bibimbap', 'bread_pudding', 'breakfast_burrito', 'bruschetta', 'caesar_salad', 'cannoli',
@@ -29,7 +30,7 @@ def load_model(path):
 
 def preprocess_buffer(buffer):
     image = Image.open(buffer)
-    image_array = tf.constant(image)
+    image_array = np.array(image)
     resized_image = tf.image.resize(image_array, [224, 224])
     return resized_image
 
