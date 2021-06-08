@@ -20,7 +20,7 @@ class_names = ['apple_pie', 'baby_back_ribs', 'baklava', 'beef_carpaccio', 'beef
                'spring_rolls', 'steak', 'strawberry_shortcake', 'sushi', 'tacos', 'takoyaki', 'tiramisu',
                'tuna_tartare', 'waffles']
 
-st.cache();
+# st.cache();
 
 
 def load_model(path):
