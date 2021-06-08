@@ -29,7 +29,7 @@ def load_model(path):
 
 
 def preprocess_buffer(buffer):
-    image = Image.open(buffer)
+    image = Image.open(buffer).convert('RGB')
     image_array = np.array(image)
     resized_image = tf.image.resize(image_array, [224, 224])
     return resized_image,image
